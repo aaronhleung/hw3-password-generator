@@ -20,10 +20,13 @@ function includeUppercase() {
   caseCheck = caseCheck.toLowerCase();
   if (caseCheck === 'yes') {
     caseCheck = true;
-  } else {
+  } else if (caseCheck === 'no') {
     caseCheck = false;
+  } else {
+  caseCheck = alert("Please type \"yes\" or \"no\"")
+  includeUppercase();
   }
-  return caseCheck;
+  return caseCheck
 }
 
 // prompts user asking if they would like to include numbers in password
@@ -33,8 +36,11 @@ function includeNumbers() {
   numberCheck = numberCheck.toLowerCase();
   if (numberCheck === 'yes') {
     numberCheck = true;
-  } else {
+  } else if (numberCheck === 'no') {
     numberCheck = false;
+  } else {
+  numberCheck = alert("Please type \"yes\" or \"no\"")
+  includeNumbers();
   }
   return numberCheck;
 }
@@ -46,8 +52,11 @@ function includeSpecialChar() {
   specialCharCheck = specialCharCheck.toLowerCase();
   if (specialCharCheck === 'yes') {
     specialCharCheck = true;
-  } else {
+  } else if (specialCharCheck === 'no') {
     specialCharCheck = false;
+  } else {
+  specialCharCheck = alert("Please type \"yes\" or \"no\"")
+  includeSpecialChar();
   }
   return specialCharCheck;
 }
