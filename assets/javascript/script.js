@@ -76,8 +76,6 @@ function generatePassword() {
   console.log(specialCharCheck);
 
   // user's criteria (uppercase, numbers, special characters) are added to the character string
-  // random chars from the character string are then concatenated into the password string
-  // passwordLength number of times.
   var characters = lowercaseChar;
   var password = '';
   if (caseCheck && numberCheck && specialCharCheck) {
@@ -97,7 +95,8 @@ function generatePassword() {
   } else {
     characters === lowercaseChar;
   }
-
+  // random chars from the character string are concatenated into the password string
+  // passwordLength number of times.
   for (var i = 0; i < passwordLength; i++) {
     password += characters.charAt(Math.floor(Math.random() * characters.length));
   }
@@ -106,9 +105,9 @@ function generatePassword() {
 
 // Write password to the #password input
 function writePassword() {
-  var password1 = generatePassword();
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  passwordText.value = password1;
+  passwordText.value = password;
 
 }
 
