@@ -1,4 +1,3 @@
-// Assignment code here
 var lowercaseChar = 'abcdefghijklmnopqrstuvwxyz';
 var uppercaseChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var specialChar = " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
@@ -11,8 +10,6 @@ function getLength() {
   passwordLength = prompt("Choose a password length between 8-128 characters");
   if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
     alert("Password length must be between 8-128 characters.");
-  } else {
-    alert("Choose your password criteria.")
   }
   return passwordLength;
 }
