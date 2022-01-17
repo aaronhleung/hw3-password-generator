@@ -9,7 +9,8 @@ var specialCharCheck;
 function getLength() {
   passwordLength = prompt("Choose a password length between 8-128 characters");
   if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
-    alert("Password length must be between 8-128 characters.");
+    alert("Password length must be between 8-128 characters.")
+    getLength();
   }
   return passwordLength;
 }
@@ -30,7 +31,6 @@ function includeUppercase() {
 }
 
 // prompts user asking if they would like to include numbers in password
-
 function includeNumbers() {
   numberCheck = prompt("Include numbers in your password?");
   numberCheck = numberCheck.toLowerCase();
@@ -63,8 +63,6 @@ function includeSpecialChar() {
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-
-
 function generatePassword() {
   getLength();
   console.log(passwordLength);
@@ -95,6 +93,7 @@ function generatePassword() {
   } else {
     characters === lowercaseChar;
   }
+
   // random chars from the character string are concatenated into the password string
   // passwordLength number of times.
   for (var i = 0; i < passwordLength; i++) {
@@ -108,7 +107,6 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
